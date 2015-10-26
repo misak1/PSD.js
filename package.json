@@ -1,0 +1,15 @@
+{
+  "name": "psd_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "JSONPath": "git://github.com/s3u/JSONPath.git",
+    "json": "^9.0.3"
+  }
+}

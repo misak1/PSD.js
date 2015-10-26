@@ -1,0 +1,8 @@
+node_modules
+public/data
+public/images/screenshot
+public/pdf/download.pdf
+public/data/filelist.json
+dist
+.tmp
+.sass-cache
