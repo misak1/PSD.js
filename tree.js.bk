@@ -97,7 +97,6 @@ String.prototype.repeat = function (i){
 
 
 var i = 1;
-var psdData = [];
 while(true){
   // var JSONPath = require('JSONPath');
   eval("var json2 = " + json + ";");
@@ -115,23 +114,82 @@ while(true){
   for (var x in obj) {
       var c = obj[x];
       if (c.top !== undefined) {
-          var tmp = "[{" +
-              '"name":"' + (c.name).addslashes('"') + '",' +
+          console.log('"name":"' + (c.name).addslashes('"') + '",' +
               '"visible":' + c.visible + "," +
               '"top":' + c.top + "," +
               '"left":' + c.left + "," +
               '"width":' + c.width + "," +
-              '"height":' + c.height +
-           "}]";
-           eval("var layerData = " + tmp + ";");
-           psdData.push(layerData);
+              '"height":' + c.height);
       }
   }
   i++;
 }
-var PSDjson = JSON.stringify(psdData);
-console.log(JSON.parse(PSDjson));
 
+
+
+// console.log(obj);
+//
+// for (i in obj) {
+//     var c = obj[i];
+//     if (c.top !== undefined) {
+//         console.log('"name":' + c.name + ',' +
+//             '"visible":' + c.visible + "," +
+//             '"top":' + c.top + "," +
+//             '"left":' + c.left + "," +
+//             '"width":' + c.width + "," +
+//             '"height":' + c.height);
+//     }
+// }
+//
+//
+// var obj2 = JSONPath({
+//     json: json2,
+//     path: "$.children[*].children[*]"
+// });
+// console.log(obj2);
+// for (i in obj2) {
+//     var c = obj2[i];
+//     if (c.top !== undefined) {
+//         console.log('"name":"' + (c.name).addslashes('"') + '",' +
+//             '"visible":' + c.visible + "," +
+//             '"top":' + c.top + "," +
+//             '"left":' + c.left + "," +
+//             '"width":' + c.width + "," +
+//             '"height":' + c.height);
+//     }
+// }
+//
+// var obj3 = JSONPath({
+//     json: json2,
+//     path: "$.children[*].children[*].children[*]"
+// });
+// for (i in obj3) {
+//     var c = obj3[i];
+//     if (c.top !== undefined) {
+//         console.log('"name":' + c.name + ',' +
+//             '"visible":' + c.visible + "," +
+//             '"top":' + c.top + "," +
+//             '"left":' + c.left + "," +
+//             '"width":' + c.width + "," +
+//             '"height":' + c.height);
+//     }
+// }
+//
+// var obj4 = JSONPath({
+//     json: json2,
+//     path: "$.children[*].children[*].children[*].children[*]"
+// });
+// for (i in obj4) {
+//     var c = obj4[i];
+//     if (c.top !== undefined) {
+//         console.log('"name":' + c.name + ',' +
+//             '"visible":' + c.visible + "," +
+//             '"top":' + c.top + "," +
+//             '"left":' + c.left + "," +
+//             '"width":' + c.width + "," +
+//             '"height":' + c.height);
+//     }
+// }
 
 // png = psd.image.toPng(); // get PNG object
 // psd.image.saveAsPng('./href_test.png').then(function () {
