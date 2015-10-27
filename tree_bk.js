@@ -42,7 +42,7 @@ String.prototype.repeat = function (i){
 //       return;
 //     }
 //     n++;
-//     next(n);
+//     next(n); // <-- 次の処理を開始
 //   }, 1000, n);
 // })(n);
 
@@ -62,38 +62,9 @@ String.prototype.repeat = function (i){
 //       return;
 //     }
 //     n++;
-//     next(n, ary);
+//     next(n, ary); // <-- 次の処理を開始
 //   }, 1000, n, ary);
 // })(n, ary);
-
-// 直列処理
-// var it79 = require('iterate79');
-// it79.fnc(
-//     {} , // <- initial value of `arg`.
-//     [
-//         function(it, arg){
-//             console.log(arg.test); // <- undefined
-//             arg.test = 1;
-//             setTimeout(function(){
-//                 it.next(arg);
-//             },1000);
-//         },
-//         function(it, arg){
-//             console.log(arg.test); // <- 1
-//             arg.test = 2;
-//             setTimeout(function(){
-//                 it.next(arg);
-//             },10);
-//         },
-//         function(it, arg){
-//             console.log(arg.test); // <- 2
-//             it.next();
-//         },
-//         function(){
-//             console.log('done!');
-//         }
-//     ]
-// );
 
 
 var i = 1;

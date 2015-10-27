@@ -47,19 +47,19 @@ while(true){
   }
 
   for (var x in obj) {
-    var c = obj[x];
-    if (c.top !== undefined) {
-      var tmp = "[{" +
-          '"name":"' + (c.name).addslashes('"') + '",' +
-          '"visible":' + c.visible + "," +
-          '"top":' + c.top + "," +
-          '"left":' + c.left + "," +
-          '"width":' + c.width + "," +
-          '"height":' + c.height +
-       "}]";
-       eval("var layerData = " + tmp + ";");
-       psdData.push(layerData);
-    }
+      var c = obj[x];
+      if (c.top !== undefined) {
+          var tmp = "[{" +
+              '"name":"' + (c.name).addslashes('"') + '",' +
+              '"visible":' + c.visible + "," +
+              '"top":' + c.top + "," +
+              '"left":' + c.left + "," +
+              '"width":' + c.width + "," +
+              '"height":' + c.height +
+           "}]";
+           eval("var layerData = " + tmp + ";");
+           psdData.push(layerData);
+      }
   }
   i++;
 }
