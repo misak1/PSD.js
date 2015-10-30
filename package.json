@@ -10,9 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "JSONPath": "git://github.com/s3u/JSONPath.git",
+    "browserify": "^12.0.0",
     "fs": "0.0.2",
     "iterate79": "0.0.1",
     "json": "^9.0.3",
+    "m-log": "0.0.1",
+    "m-require": "0.0.1",
+    "m-util": "0.0.2",
     "psd": "^3.1.0",
     "underscore": "^1.8.3"
   }
